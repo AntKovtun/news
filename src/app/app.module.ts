@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-/* import { HttpClientModule } from '@angular/common/http';
-import { NewsApiService } from './news-api.service'; */
+import { HttpClientModule } from '@angular/common/http';
+import { NewsApiService } from './news-api.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +20,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
   
+
 @NgModule({
   declarations: [
     AppComponent
@@ -35,8 +36,9 @@ import { MatListModule } from '@angular/material/list';
     MatIconModule,
     MatSidenavModule,
     MatListModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [NewsApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
