@@ -1,11 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
 import { NewsApiService } from './news-api.service';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 
 /* import modules */
 import { MatInputModule } from '@angular/material/input';
@@ -19,14 +19,16 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; /* import  animations module for ng */
 
-/* import { AppComponent } from './app.component'; */  /* what is it? */
+import { AppComponent } from './app.component';
+import { InputComponent } from './input/input.component';   /* what is it? */
 
 
   
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    InputComponent
   ],
   imports: [
     MatInputModule,
@@ -41,6 +43,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
     MatSidenavModule,
     MatListModule,
     HttpClientModule,
+    FormsModule,
   ],
   providers: [NewsApiService],
   bootstrap: [AppComponent]
