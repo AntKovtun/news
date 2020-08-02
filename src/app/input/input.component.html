@@ -1,13 +1,17 @@
 <form class="example-form">
     <mat-form-field class="example-full-width">
         <input matInput 
-        placeholder="Search bitcoin news"         
+        placeholder="Search bitcoin news"
+        [minlength]="minLangth"         
         [(ngModel)]="searchNews"
         (ngModelChange)="handleChange()" [ngModelOptions]="{ standalone: true }"
         >
         <button mat-button matSuffix mat-icon-button aria-label="Clear" *ngIf="searchNews" (click)="searchNews=''">
             <mat-icon>close</mat-icon>
         </button>
+        <mat-error>
+            min. symbol is {{ minLangth }}
+        </mat-error>
     </mat-form-field>
 </form>
 
