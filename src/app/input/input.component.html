@@ -1,11 +1,11 @@
 <form class="example-form">
     <mat-form-field class="example-full-width">
         <input matInput 
-        placeholder="Search news"         
+        placeholder="Search bitcoin news"         
         [(ngModel)]="searchNews"
-        (ngModelChange)="handleChange()" [ngModelOptions]="{ standalone: true }"; 
+        (ngModelChange)="handleChange()" [ngModelOptions]="{ standalone: true }"
         >
-        <button mat-button matSuffix mat-icon-button aria-label="Clear">
+        <button mat-button matSuffix mat-icon-button aria-label="Clear" *ngIf="searchNews" (click)="searchNews=''">
             <mat-icon>close</mat-icon>
         </button>
     </mat-form-field>
